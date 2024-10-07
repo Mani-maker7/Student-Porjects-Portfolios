@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
-
-const Signup = ({ setView }) => {
+const Signup = () => {
     const [user, setUser] = useState({
         firstname: '',
         lastname: '',
@@ -20,17 +19,14 @@ const Signup = ({ setView }) => {
         });
     };
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
-        const response = await fetch('http://localhost:8080/user/signup', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(user),
-        });
-        const result = await response.text();
-        alert(result);
+        // Dummy signup handling
+        if (user.firstname && user.lastname && user.mobileno && user.emailid && user.username && user.password) {
+            alert("Signup successful!");
+        } else {
+            alert("Please fill all fields correctly.");
+        }
     };
 
     return (
@@ -45,7 +41,7 @@ const Signup = ({ setView }) => {
                 <input type="text" name="username" placeholder="Username" onChange={handleChange} required />
                 <input type="password" name="password" placeholder="Password" onChange={handleChange} required />
                 <button className='login-button' type="submit">Signup</button>
-                <p>Already have an account? <Link to="/login" style={{ color: 'blue' }}>Login</Link></p> {/* Use Link for navigation */}
+                <p>Already have an account? <Link to="/login" style={{ color: 'blue' }}>Login</Link></p>
             </form>
         </div>
     );
