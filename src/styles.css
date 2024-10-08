@@ -2,7 +2,6 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url('/Users/user/Downloads/light-white-orange-texture-background.jpg'); /* Update this path as necessary */
     background-size: cover; /* Ensures the image covers the entire background */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the image */
@@ -188,7 +187,7 @@ button:disabled {
 .content {
     flex-grow: 1;
     padding: 20px;
-    background-image: url('/Users/user/Downloads/light-white-orange-texture-background.jpg'); /* Update this path as necessary */
+   /* background-image: url('/Users/user/Downloads/light-white-orange-texture-background.jpg');  Update this path as necessary */
     background-size: cover; /* Ensures the image covers the entire background */
     background-repeat: no-repeat; /* Prevents the image from repeating */
     background-position: center; /* Centers the image */
